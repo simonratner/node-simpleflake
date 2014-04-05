@@ -1,6 +1,10 @@
 node-simpleflake
 ================
 
+[![travis](http://img.shields.io/travis/simonratner/node-simpleflake.svg)](https://travis-ci.org/simonratner/node-simpleflake) &nbsp;
+[![deps](http://david-dm.org/simonratner/node-simpleflake.svg)](https://david-dm.org/simonratner/node-simpleflake) &nbsp;
+[![npm](http://img.shields.io/npm/v/simpleflake.svg)](https://www.npmjs.org/package/simpleflake)
+
 Distributed id generation for the lazy. Inspired by [this article](http://engineering.custommade.com/simpleflake-distributed-id-generation-for-the-lazy/).
 
 Generates ids consisting of a 41 bit time (millisecond precision with custom
@@ -14,6 +18,12 @@ Install
 -------
 ```
 npm install simpleflake
+```
+
+Test
+----
+```
+npm test
 ```
 
 Use
