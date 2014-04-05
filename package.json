@@ -14,7 +14,7 @@
   ],
 
   "dependencies": {
-    "bignum": "^0.6.2",
+    "bignum": "git://github.com/RichardBsolut/node-bignum.git#0a6bec6ab63664a5ddae807e9e146de58372d7a2",
     "base58-native": "^0.1"
   },
 
