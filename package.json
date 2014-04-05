@@ -1,6 +1,6 @@
 {
   "name": "simpleflake",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Distributed id generation for the lazy.",
 
   "author": "Simon Ratner (https://github.com/simonratner)",
