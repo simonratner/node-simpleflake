@@ -20,12 +20,6 @@ Install
 npm install simpleflake
 ```
 
-Test
-----
-```
-npm test
-```
-
 Use
 ---
 Generate an id using current time and a random sequence number:
