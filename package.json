@@ -14,8 +14,14 @@
   ],
 
   "dependencies": {
-    "bignum": "^0.6.2",
-    "base58-native": "^0.1"
+    "base58-native": "^0.1",
+    "bignum": "^0.6.2"
+  },
+
+  "devDependencies": {
+    "expectations": "*",
+    "mocha": "*",
+    "sinon": "*"
   },
 
   "homepage": "https://github.com/simonratner/node-simpleflake",
@@ -25,5 +31,9 @@
   },
   "bugs": "https://github.com/simonratner/node-simpleflake/issues",
 
-  "license": "MIT"
+  "license": "MIT",
+
+  "scripts": {
+    "test": "./node_modules/.bin/mocha -R spec -r expectations --recursive"
+  }
 }
