@@ -1,0 +1,29 @@
+{
+  "name": "simpleflake",
+  "version": "0.1.0",
+  "description": "Distributed id generation for the lazy.",
+
+  "author": "Simon Ratner (https://github.com/simonratner)",
+
+  "keywords": [
+    "id",
+    "flake",
+    "snowflake",
+    "distributed",
+    "random"
+  ],
+
+  "dependencies": {
+    "bignum": "git://github.com/RichardBsolut/node-bignum.git#0a6bec6ab63664a5ddae807e9e146de58372d7a2",
+    "base58-native": "^0.1"
+  },
+
+  "homepage": "https://github.com/simonratner/node-simpleflake",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/simonratner/node-simpleflake.git"
+  },
+  "bugs": "https://github.com/simonratner/node-simpleflake/issues",
+
+  "license": "MIT"
+}
