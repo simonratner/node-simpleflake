@@ -1,6 +1,6 @@
 {
   "name": "simpleflake",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Distributed id generation for the lazy.",
 
   "author": "Simon Ratner (https://github.com/simonratner)",
@@ -14,8 +14,17 @@
   ],
 
   "dependencies": {
-    "bignum": "git://github.com/RichardBsolut/node-bignum.git#0a6bec6ab63664a5ddae807e9e146de58372d7a2",
+    "bignum": "git://github.com/RichardBsolut/node-bignum.git#0a6bec6ab63664a5ddae807e9e146de58372d7a2"
+  },
+
+  "optionalDependencies": {
     "base58-native": "^0.1"
+  },
+
+  "devDependencies": {
+    "expectations": "*",
+    "mocha": "*",
+    "sinon": "*"
   },
 
   "homepage": "https://github.com/simonratner/node-simpleflake",
@@ -25,5 +34,9 @@
   },
   "bugs": "https://github.com/simonratner/node-simpleflake/issues",
 
-  "license": "MIT"
+  "license": "MIT",
+
+  "scripts": {
+    "test": "./node_modules/.bin/mocha -R spec -r expectations --recursive"
+  }
 }
