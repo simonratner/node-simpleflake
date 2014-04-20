@@ -68,6 +68,11 @@ describe('Simpleflake', function() {
       expect(id.toString('base58')).toBe('9c1nv33vFWy');
     });
 
+    it('can generate a base10 encoding', function() {
+      var id = flake(Date.UTC(2014, 0, 1), 42);
+      expect(id.toString('base10')).toBe('3706503089356800042');
+    });
+
     it('produces distinct ids on subsequent calls', function() {
       var id1 = flake();
       var id2 = flake();
@@ -107,6 +112,10 @@ describe('Simpleflake', function() {
 
     it('can parse a base58 string', function() {
       expect(flake.parse('9c1nv33vFWy', 'base58')).toEqual([1388534400000, 42]);
+    });
+
+    it('can parse a base10 string', function() {
+      expect(flake.parse('3706503089356800042', 'base10')).toEqual([1388534400000, 42]);
     });
 
     it('can round-trip', function() {
