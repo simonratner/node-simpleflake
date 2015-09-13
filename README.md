@@ -1,7 +1,7 @@
 node-simpleflake
 ================
 
-[![travis](http://img.shields.io/travis/simonratner/node-simpleflake.svg?style=flat)](https://travis-ci.org/simonratner/node-simpleflake) &nbsp;
+[![travis](http://img.shields.io/travis/simonratner/node-simpleflake/master.svg?style=flat)](https://travis-ci.org/simonratner/node-simpleflake) &nbsp;
 [![npm](http://img.shields.io/npm/v/simpleflake.svg?style=flat)](https://www.npmjs.org/package/simpleflake)
 
 Distributed id generation for the lazy. Inspired by [this article](http://engineering.custommade.com/simpleflake-distributed-id-generation-for-the-lazy/).
