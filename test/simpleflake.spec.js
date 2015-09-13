@@ -22,14 +22,14 @@ expect.addAssertion('toEndWith', function(tail) {
     this.assertions.pass(message);
 });
 
-expect.addAssertion('toEqualElementwise', function(tail) {
-    var message = this.generateMessage(this.value, this.expr, 'to equal elementwise', tail);
+expect.addAssertion('toEqualElementwise', function(other) {
+    var message = this.generateMessage(this.value, this.expr, 'to equal elementwise', other);
 
-    if (this.value.length != tail.length) {
+    if (this.value.length != other.length) {
         return this.assertions.fail(message);
     }
-    for (var i = 0; i < tail.length; i++) {
-      if (this.value[this.value.length - i - 1] !== tail[tail.length - i - 1]) {
+    for (var i = 0; i < other.length; i++) {
+      if (this.value[i] !== other[i]) {
         return this.assertions.fail(message);
       }
     }
