@@ -22,6 +22,20 @@ expect.addAssertion('toEndWith', function(tail) {
     this.assertions.pass(message);
 });
 
+expect.addAssertion('toEqualElementwise', function(tail) {
+    var message = this.generateMessage(this.value, this.expr, 'to equal elementwise', tail);
+
+    if (this.value.length != tail.length) {
+        return this.assertions.fail(message);
+    }
+    for (var i = 0; i < tail.length; i++) {
+      if (this.value[this.value.length - i - 1] !== tail[tail.length - i - 1]) {
+        return this.assertions.fail(message);
+      }
+    }
+    this.assertions.pass(message);
+});
+
 describe('Simpleflake', function() {
 
   var expected = [0x33, 0x70, 0x24, 0xec, 0x00, 0x00, 0x00, 0x2a];
@@ -50,7 +64,7 @@ describe('Simpleflake', function() {
 
     it('can generate an id with deterministic sequence and time', function() {
       var id = flake(Date.UTC(2014, 0, 1), 42);
-      expect(id.toArray()).toEqual(expected);
+      expect(id).toEqualElementwise(expected);
     });
 
     it('can generate an id with zero sequence', function() {
@@ -77,14 +91,14 @@ describe('Simpleflake', function() {
       var id1 = flake();
       var id2 = flake();
       expect(id1).not.toBe(id2);
-      expect(id1.toArray()).not.toEqual(id2.toArray());
+      expect(id1).not.toEqualElementwise(id2);
     });
 
     it('produces identical ids from identical inputs', function() {
       var id1 = flake(Date.UTC(2014, 0, 1), 42);
       var id2 = flake(Date.UTC(2014, 0, 1), 42);
       expect(id1).not.toBe(id2);
-      expect(id1.toArray()).toEqual(id2.toArray());
+      expect(id1).toEqualElementwise(id2);
     });
 
     it('handles time underflow', function() {
@@ -120,7 +134,7 @@ describe('Simpleflake', function() {
 
     it('can round-trip', function() {
       expect(flake.parse(flake(1388534400000, 42))).toEqual([1388534400000, 42]);
-      expect(flake.apply(null, flake.parse(expected)).toArray()).toEqual(expected);
+      expect(flake.apply(null, flake.parse(expected))).toEqualElementwise(expected);
     });
   });
 
@@ -157,7 +171,7 @@ describe('Simpleflake', function() {
       var id2 = flake(Date.UTC(2014, 0, 1), 1);
       var parsed2 = flake.parse(id2);
 
-      expect(id1.toArray()).not.toEqual(id2.toArray());
+      expect(id1).not.toEqualElementwise(id2);
       expect(parsed1).toEqual(parsed2);
     });
   });
