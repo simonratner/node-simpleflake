@@ -4,7 +4,7 @@ node-simpleflake
 [![travis](http://img.shields.io/travis/simonratner/node-simpleflake/master.svg?style=flat-square)](https://travis-ci.org/simonratner/node-simpleflake) &nbsp;
 [![npm](http://img.shields.io/npm/v/simpleflake.svg?style=flat-square)](https://www.npmjs.org/package/simpleflake)
 
-Distributed id generation for the lazy. Inspired by [this article](http://engineering.custommade.com/simpleflake-distributed-id-generation-for-the-lazy/).
+Distributed id generation for the lazy. Inspired by [this article](https://web.archive.org/web/20150416064451/http://engineering.custommade.com/simpleflake-distributed-id-generation-for-the-lazy).
 
 Generates ids consisting of a 41 bit time (millisecond precision with custom
 epoch) followed 23 random bits. Result is a `Buffer` with an added feature
