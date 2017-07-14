@@ -19,6 +19,11 @@ Install
 npm install simpleflake
 ```
 
+On Windows, you may need to specify path to your OpenSSL installation:
+```
+npm install --openssl-root=/path/to/openssl
+```
+
 Use
 ---
 Generate an id using current time and a random sequence number:
