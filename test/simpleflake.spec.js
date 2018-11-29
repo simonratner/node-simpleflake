@@ -117,7 +117,7 @@ describe('Simpleflake', function() {
   describe('parser', function() {
 
     it('can parse a buffer', function() {
-      expect(flake.parse(new Buffer(expected))).toEqual([1388534400000, 42]);
+      expect(flake.parse(Buffer.from(expected))).toEqual([1388534400000, 42]);
     });
 
     it('can parse a hex string', function() {
