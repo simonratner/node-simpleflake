@@ -24,6 +24,8 @@ On Windows, you may need to specify path to your OpenSSL installation:
 npm install --openssl-root=/path/to/openssl
 ```
 
+(Note: For a version compatible with nodejs v4, `npm install simpleflake@1.0.1`)
+
 Use
 ---
 Generate an id using current time and a random sequence number:
